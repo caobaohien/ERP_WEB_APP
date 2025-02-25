@@ -1,0 +1,69 @@
+.button_top {
+	width: 100px;
+	margin-top: -15px;
+}
+
+.button_top a, .button_bottom a {
+	display: block;
+	height: 30px;
+	width: 120px;
+	color: #36611e;
+	font: 12px Helvetica, Verdana, sans-serif;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 30px;
+	font-weight: bold;
+	text-shadow: 0px 1px 0px #8fd365;
+	/*Tạo Gradient*/
+	background: #83d347; /* Old browsers */
+	background: -moz-linear-gradient(top, #83d347 0%, #55b137 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #83d347),
+		color-stop(100%, #55b137)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #83d347 0%, #55b137 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #83d347 0%, #55b137 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #83d347 0%, #55b137 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #83d347 0%, #55b137 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83d347',
+		endColorstr='#55b137', GradientType=0); /* IE6-9 */
+}
+
+.button_top a, p {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.button_top p {
+	background: #222;
+	display: block;
+	height: 40px;
+	width: 180px;
+	text-align: center;
+	font: 12px Helvetica, Verdana, sans-serif;
+	color: #fff;
+	line-height: 40px;
+	position: absolute;
+	z-index: -1;
+}
+
+.button_top p {
+	margin: -50px 0 0 10px;
+}
+
+.button_top:hover .top {
+	margin: -80px 0 0 10px;
+	line-height: 30px;
+}
+
+.button_top p {
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
