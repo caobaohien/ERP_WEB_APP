@@ -192,17 +192,18 @@ function replaces(){
 	var khTen=document.getElementsByName("khTen");
 	var smartId=document.getElementsByName("smartId");
 	for(var i=0;i<smartId.length;i++){
-		var tem=smartId.item(0).value;
+		var tem=smartId.item(i).value;
 		if(tem==""){
-			khTen.item(0).value = "";
+			khTen.item(i).value = "";
 			document.getElementById("khId").value = "";
 			break;
 		}
 		if(parseInt(tem.indexOf("-->"))>0){
 			var tmp=tem.substring(0,parseInt(tem.indexOf("-->[")));
 			document.getElementById("khId").value=tmp.substring(0,parseInt(tem.indexOf("-")));
-			smartId.item(0).value=tmp.substring(parseInt(tem.indexOf("-"))+1,tmp.length);
-			khTen.item(0).value=tem.substring(parseInt(tem.indexOf("-->["))+4, parseInt(tem.indexOf("]")));
+			//smartId.item(0).value=tmp.substring(parseInt(tem.indexOf("-"))+1,tmp.length);
+			smartId.item(i).value=tmp.substring(0,parseInt(tem.indexOf("-")));
+			khTen.item(i).value=tem.substring(parseInt(tem.indexOf("-->["))+4, parseInt(tem.indexOf("]")));
 			
 			break;
 		}
@@ -243,9 +244,9 @@ function replaces(){
 			}
 			if(parseInt(sp.indexOf("-->"))>0){
 				var tmp=sp.substring(0,parseInt(sp.indexOf("-->")));
-				document.getElementById("spId").value=tmp.substring(parseInt(tmp.indexOf("-"))+1,tmp.length);
+				//document.getElementById("spId").value=tmp.substring(parseInt(tmp.indexOf("-"))+1,tmp.length);
 				masp.item(i).value=tmp.substring(0,parseInt(tmp.indexOf("-")));
-				idsp.item(i).value=tmp.substring(parseInt(tem.indexOf("-"))+1, tmp.length);
+				idsp.item(i).value=tmp.substring(parseInt(tmp.indexOf("-"))+1, tmp.length);
 				var tkp=sp.substring(parseInt(sp.indexOf("-->"))+3, sp.length);
 				tensp.item(i).value=tkp.substring(0,parseInt(tkp.indexOf("-")));
 				dongia.item(i).value=tkp.substring(parseInt(tkp.indexOf("-"))+1, tkp.length);

@@ -27,7 +27,7 @@
 		
 		command="select distinct top(30) smartid, pk_seq as khId, ten as khTen, diachi ";
 		command+="from khachhang where trangthai = '1' ";
-		command+="and ( smartid = '"+ query + "%' or ten like (N'%" + query + "%')) ";
+		command+="and ( smartid like N'%"+ query + "%' or ten like (N'%" + query + "%')) ";
 		command+="order by khId, smartid, khTen";
 		System.out.println("KHACHHANG : "+command);
 		ResultSet kh=db.get(command);

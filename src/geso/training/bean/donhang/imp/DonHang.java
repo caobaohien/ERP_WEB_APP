@@ -597,8 +597,8 @@ private String SYSDATETIME() {
 		// TODO Auto-generated method stub
 		try{
 		db.getConnection().setAutoCommit(false);
-		String query="insert into khachhang(pk_seq, ma, ten, maFAST, trangthai, diachi)"
-				+ "values('"+this.Makh+"','"+this.Tenkh+"','"+this.Tenkh+"','"+this.khdienthoai+"','"+this.khdienthoai+"','"+this.khdiachi+"')";
+		String query="insert into khachhang(pk_seq, ma, ten, maFAST, dienthoai, diachi)"
+				+ "values('"+this.Makh+"','"+this.Makh+"','"+this.Tenkh+"','"+this.khdienthoai+"','"+this.khdienthoai+"','"+this.khdiachi+"')";
 		if(!db.update(query)){
 			db.getConnection().rollback();
 			this.msg="không thể save khách hàng mới: " + query;
